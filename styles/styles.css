@@ -14,16 +14,19 @@ h1 {
 body {
     background: powderblue
 }
-.flex-container {
+.stundenplan {
     display: flex;
 }
 
-.flex-item {
+.tag{
     flex:auto;
+    padding: 23px;
+
+}
+.tag p {
     border: 2px solid;
     margin: 34px;
     padding: 23px;
     background:green;
     text-align: center;
 }
-
