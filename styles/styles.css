@@ -1,9 +1,29 @@
-h1 {
+
+h2 {
     color: red;
     text-align: center;
     background: aqua;
+    border-radius: 5em;
+    font-size: larger;
+}
+h1 {
+    color: red;
+    text-align: center;
     border-radius: 5em;
 }
 body {
     background: powderblue
 }
+.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    flex:auto;
+    border: 2px solid;
+    margin: 34px;
+    padding: 23px;
+    background:green;
+    text-align: center;
+}
+
