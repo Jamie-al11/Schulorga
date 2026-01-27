@@ -2,15 +2,20 @@
 h2 {
     color: red;
     text-align: center;
-    background: aqua;
     border-radius: 5em;
-    font-size: larger;
 }
 h1 {
     color: red;
+    background: aqua;
     text-align: center;
     border-radius: 5em;
 }
+hr {
+
+}
+
+
+
 body {
     background: powderblue
 }
