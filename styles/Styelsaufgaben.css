@@ -1,4 +1,30 @@
 h1{
-    color: green;
+    color: red;
+    background: aqua;
+    text-align: center;
+    border-radius: 5em;
+}
+p{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+a{
+    text-align: center;
+}
+body {
+    background: powderblue;
+}
+
+.Tage{
+    display: flex;
+}
+
+.aufgaben {
+    border: 2px solid;
+    margin: 50px;
+    padding: 5px;
+    background:green;
     text-align: center;
 }
