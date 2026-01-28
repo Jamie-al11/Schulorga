@@ -11,23 +11,15 @@
     <div class="tag">
         <h2>Mo</h2>
         <hr>
-        <p>
             <?php
-            $test =file_get_contents('test.txt');
-            echo $test;
+            $zeiele = file("test.txt", FILE_IGNORE_NEW_LINES);
+            echo "<p>$zeiele[0]</p>";
+            echo "<p>$zeiele[1]</p>";
+            echo "<p>$zeiele[2]</p>";
+            echo "<p>$zeiele[3]</p>";
+            echo "<p>$zeiele[4]</p>";
+            echo "<p>$zeiele[5]</p>";
             ?>
-        </p>
-        <p>
-            <?php
-            $test =file_get_contents('test1.txt');
-            echo $test;
-            ?>
-        </p>
-        <p>F3</p>
-        <p>F4</p>
-        <p>F5</p>
-        <p>F6</p>
-
     </div>
     <div class="tag">
         <h2>Di</h2>

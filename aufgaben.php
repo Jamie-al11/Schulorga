@@ -17,10 +17,9 @@
         ?>
     </h2>
     <?php
-    $test = 1;
-    if ($test == 1) {
-       echo "<p class='aufgaben'>aufgabe</p>";
-    }?>
+    $test =file_get_contents('test1.txt');
+    echo "<p class='aufgaben'>$test</p>";
+    ?>
 </div>
 <div class="tag">
     <h2>28.9.26</h2>
