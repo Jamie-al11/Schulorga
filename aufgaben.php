@@ -16,8 +16,11 @@
         echo date("d.m.Y");
         ?>
     </h2>
-    <p class="aufgaben">Eine Aufgabe</p>
-    <p class="aufgaben"> aufgabe </p>
+    <?php
+    $test = 1;
+    if ($test == 1) {
+       echo "<p class='aufgaben'>aufgabe</p>";
+    }?>
 </div>
 <div class="tag">
     <h2>28.9.26</h2>
@@ -27,7 +30,7 @@
 
 <a href="index.php">Hauptseite</a>
 <p></p>
-<a href="test.php">test</a>
+<a href="formularst.php">Formular</a>
 
 </body>
 </html>

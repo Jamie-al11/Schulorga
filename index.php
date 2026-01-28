@@ -11,8 +11,18 @@
     <div class="tag">
         <h2>Mo</h2>
         <hr>
-        <p><?php echo file_get_contents('test.txt'); ?></p>
-        <p>F2</p>
+        <p>
+            <?php
+            $test =file_get_contents('test.txt');
+            echo $test;
+            ?>
+        </p>
+        <p>
+            <?php
+            $test =file_get_contents('test1.txt');
+            echo $test;
+            ?>
+        </p>
         <p>F3</p>
         <p>F4</p>
         <p>F5</p>
@@ -64,6 +74,6 @@
     </div>
 </div>
 <a href="aufgaben.php">Aufgabenseite</a>
-<a href="test.php" >Formular</a>
+<a href="formularst.php" >Formular</a>
 </body>
 </html>
