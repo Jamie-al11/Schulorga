@@ -1,8 +1,8 @@
-<form id=" Text ">
+<form method="post" action="empfagen.php">
     <h1> Formular</h1>
-    <label for="vorname">Vorname</label>
-    <input name = vorname />
+    <label>Name</label>
+    <input type="text" name="name">
     <button type="submit"> Abfeueren </button>
 </form>
-
 <a href="index.php"> Startseite </a>
+
