@@ -12,58 +12,54 @@
         <h2>Mo</h2>
         <hr>
         <?php
-        $zeiele = file("test.txt", FILE_IGNORE_NEW_LINES);
-        $n =sizeof($zeiele);
+        $zeile = file("test.txt", FILE_IGNORE_NEW_LINES);
+        $n =sizeof($zeile);
         for ($i = 0;$i < $n;$i++) {
-            echo "<p>$zeiele[$i]</p>";
+            echo "<p>$zeile[$i]</p>";
         }
         ?>
     </div>
     <div class="tag">
         <h2>Di</h2>
         <hr>
-        <p>F1</p>
-        <p>F2</p>
-        <p>F3</p>
-        <p>F4</p>
-        <p>F5</p>
-        <p>F6</p>
+        <?php
+        for ($i = 1;$i < 7;$i++) {
+            echo "<p>F$i</p>";
+        }
+        ?>
     </div>
     <div class="tag">
         <h2>Mi</h2>
         <hr>
-        <p>F1</p>
-        <p>F2</p>
-        <p>F3</p>
-        <p>F4</p>
-        <p>F5</p>
-        <p>F6</p>
+        <?php
+        for ($i = 1;$i < 7;$i++) {
+            echo "<p>F$i</p>";
+        }
+        ?>
 
     </div>
     <div class="tag">
         <h2>Do</h2>
         <hr>
-        <p>F1</p>
-        <p>F2</p>
-        <p>F3</p>
-        <p>F4</p>
-        <p>F5</p>
-        <p>F6</p>
+        <?php
+        for ($i = 1;$i < 7;$i++) {
+            echo "<p>F$i</p>";
+        }
+        ?>
 
     </div>
     <div class="tag">
         <h2>Fr</h2>
         <hr>
-        <p>F1</p>
-        <p>F2</p>
-        <p>F3</p>
-        <p>F4</p>
-        <p>F5</p>
-        <p>F6</p>
+        <?php
+        for ($i = 1;$i < 7;$i++) {
+            echo "<p>F$i</p>";
+        }
+        ?>
 
     </div>
 </div>
 <a href="aufgaben.php">Aufgabenseite</a>
-<a href="formularst.php" >Formular</a>
+<a href="formularst.php" >Bearbeiten</a>
 </body>
 </html>
