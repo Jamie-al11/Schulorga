@@ -55,7 +55,8 @@
         echo "<p>F$i</p>";
     }
     ?>
-  </div>-->
+
+  </div>
 </div>
     <button type="submit"> Fertig </button>
 </form>
