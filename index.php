@@ -11,15 +11,13 @@
     <div class="tag">
         <h2>Mo</h2>
         <hr>
-            <?php
-            $zeiele = file("test.txt", FILE_IGNORE_NEW_LINES);
-            echo "<p>$zeiele[0]</p>";
-            echo "<p>$zeiele[1]</p>";
-            echo "<p>$zeiele[2]</p>";
-            echo "<p>$zeiele[3]</p>";
-            echo "<p>$zeiele[4]</p>";
-            echo "<p>$zeiele[5]</p>";
-            ?>
+        <?php
+        $zeiele = file("test.txt", FILE_IGNORE_NEW_LINES);
+        $n =sizeof($zeiele);
+        for ($i = 0;$i < $n;$i++) {
+            echo "<p>$zeiele[$i]</p>";
+        }
+        ?>
     </div>
     <div class="tag">
         <h2>Di</h2>

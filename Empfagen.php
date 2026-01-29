@@ -1,15 +1,13 @@
 <?php
-$mof1 = $_POST['mof1'];
-$mof2 = $_POST['mof2'];
-if (empty($mof1))
-    {}
-else
-    file_put_contents('test.txt', $mof1);
 
-if (empty($mof2))
-    {}
-else
-    file_put_contents('test1.txt', $mof2);
+$mof0 = $_POST["mof"];
+$mof1 = $_POST['mof'];
+
+
+
+file_put_contents('test.txt', $mof0."\n");
+file_put_contents('test.txt', $mof1."\n", FILE_APPEND);
+
 
 
 
