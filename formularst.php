@@ -16,7 +16,7 @@
         $json = file_get_contents("test.txt");
         $plan = json_decode($json, true);
         $mo = $plan["mof"];
-        $n = 6;//sizeof($mo);
+        $n = sizeof($mo);
         for ($i = 0;$i < $x;$i++) {
             echo "<input type='hidden' name='anzahl'  value = $x >";
             if ($i   < $n ) {
@@ -36,7 +36,7 @@
       $json = file_get_contents("test.txt");
       $plan = json_decode($json, true);
       $di = $plan["dif"];
-      $n = 6;//sizeof($mo);
+      $n = sizeof($di);
       for ($i = 0;$i < $x;$i++) {
           echo "<input type='hidden' name='anzahl'  value = $x >";
           if ($i   < $n ) {
@@ -56,7 +56,7 @@
       $json = file_get_contents("test.txt");
       $plan = json_decode($json, true);
       $mi = $plan["mif"];
-      $n = 6;//sizeof($mo);
+      $n = sizeof($mi);
       for ($i = 0;$i < $x;$i++) {
           echo "<input type='hidden' name='anzahl'  value = $x >";
           if ($i   < $n ) {
@@ -76,7 +76,7 @@
       $json = file_get_contents("test.txt");
       $plan = json_decode($json, true);
       $do = $plan["dof"];
-      $n = 6;//sizeof($mo);
+      $n = sizeof($do);
       for ($i = 0;$i < $x;$i++) {
           echo "<input type='hidden' name='anzahl'  value = $x >";
           if ($i   < $n ) {
@@ -96,7 +96,7 @@
       $json = file_get_contents("test.txt");
       $plan = json_decode($json, true);
       $fr = $plan["frf"];
-      $n = 6;//sizeof($mo);
+      $n = sizeof($fr);
       for ($i = 0;$i < $x;$i++) {
           echo "<input type='hidden' name='anzahl'  value = $x >";
           if ($i   < $n ) {
