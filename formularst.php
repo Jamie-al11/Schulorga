@@ -19,10 +19,10 @@
             echo "<input type='hidden' name='anzhal'  value = $x >";
             if ($i   < $n ) {
                 echo "<p>
-                    <input type='text' name='mof$i'value=$zeile[$i]></p>";}
+                    <input type='text' name='mof[]' value=$zeile[$i]></p>";}
             else{
                echo "<p>
-                    <input type='text' name='mof$i'></p>";
+                    <input type='text' name='mof[]'></p>";
                     }}
         ?>
     </div>
