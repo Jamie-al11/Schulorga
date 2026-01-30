@@ -4,7 +4,7 @@
     <link href="styles/styles.css" rel="stylesheet"/>
 </head>
 
-<form method="post" action="Empfagen.php">
+<form method="post" action="empfangen.php">
 <h1>Schulorga</h1>
 
 <div class="stundenplan">
