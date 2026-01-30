@@ -10,8 +10,9 @@
 <div class="stundenplan">
     <?php
         foreach(['mo','di','mi','do','fr'] as $wochentag){
+            $ganzername = array("mo" =>"Monatg","di" =>"Diensttag","mi"=> "Mittwoch","do" => "Donnerstag","fr" =>"Freitag");
             echo ('<div class="tag">');
-            echo ("<h2>$wochentag</h2>");
+            echo ("<h2>$ganzername[$wochentag]</h2>");
             echo ("<hr>");
         $x = 6; // Anzahl der Stunden die ein fach abfragen
         $json = file_get_contents("test.txt");
