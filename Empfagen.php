@@ -1,14 +1,22 @@
 <?php
-$x = $_POST['anzhal'] ;
+$x = $_POST['anzahl'] ;
 
 
 $mof = $_POST['mof'];
+$dif = $_POST['dif'];
+$mif = $_POST['mif'];
+$dof = $_POST['dof'];
+$frf = $_POST['frf'];
+
+$stundenplan = array( "mof" => $mof,
+                      "dif" => $dif,
+                      "mif" => $mif,
+                      "dof" => $dof,
+                      "frf" => $frf
+                );
 
 
-
-
-file_put_contents('test.txt', $mof[0]."\n");
-for ($i = 1;$i < $x;$i++) {;
-    file_put_contents('test.txt', $mof[$i]."\n", FILE_APPEND);}
+file_put_contents("test.txt", json_encode($stundenplan, JSON_PRETTY_PRINT));
 
 header("Location: http://localhost/Schulorga/");
+//echo"<a href='index.php'> startseite</a>";
