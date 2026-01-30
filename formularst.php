@@ -12,10 +12,11 @@
         <h2>Mo</h2>
         <hr>
         <?php
-
+        $x = 9; // Anzahl der Stunden die ein fach abfragen
         $zeile = file("test.txt", FILE_IGNORE_NEW_LINES);
         $n = sizeof($zeile);
-        for ($i = 0;$i < 6;$i++) {
+        for ($i = 0;$i < $x;$i++) {
+            echo "<input type='hidden' name='anzhal'  value = $x >";
             if ($i   < $n ) {
                 echo "<p>
                     <input type='text' name='mof$i'value=$zeile[$i]></p>";}
