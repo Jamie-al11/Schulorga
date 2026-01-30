@@ -12,10 +12,12 @@
         <h2>Mo</h2>
         <hr>
         <?php
-        $zeile = file("test.txt", FILE_IGNORE_NEW_LINES);
-        $n =sizeof($zeile);
-        for ($i = 0;$i < $n;$i++) {
-            echo "<p>$zeile[$i]</p>";
+        $json = file_get_contents("test.txt");
+        $plan = json_decode($json, true);
+        $mo = $plan["mof"];
+        $mn =sizeof($mo);
+        for ($i = 0;$i < $mn;$i++) {
+            echo "<p>$mo[$i]</p>";
         }
         ?>
     </div>
@@ -23,8 +25,12 @@
         <h2>Di</h2>
         <hr>
         <?php
-        for ($i = 1;$i < 7;$i++) {
-            echo "<p>F$i</p>";
+        $json = file_get_contents("test.txt");
+        $plan = json_decode($json, true);
+        $mo = $plan["dif"];
+        $mn =sizeof($mo);
+        for ($i = 0;$i < $mn;$i++) {
+            echo "<p>$mo[$i]</p>";
         }
         ?>
     </div>
@@ -32,8 +38,12 @@
         <h2>Mi</h2>
         <hr>
         <?php
-        for ($i = 1;$i < 7;$i++) {
-            echo "<p>F$i</p>";
+        $json = file_get_contents("test.txt");
+        $plan = json_decode($json, true);
+        $mo = $plan["mif"];
+        $mn =sizeof($mo);
+        for ($i = 0;$i < $mn;$i++) {
+            echo "<p>$mo[$i]</p>";
         }
         ?>
 
@@ -42,8 +52,12 @@
         <h2>Do</h2>
         <hr>
         <?php
-        for ($i = 1;$i < 7;$i++) {
-            echo "<p>F$i</p>";
+        $json = file_get_contents("test.txt");
+        $plan = json_decode($json, true);
+        $mo = $plan["dof"];
+        $mn =sizeof($mo);
+        for ($i = 0;$i < $mn;$i++) {
+            echo "<p>$mo[$i]</p>";
         }
         ?>
 
@@ -52,8 +66,12 @@
         <h2>Fr</h2>
         <hr>
         <?php
-        for ($i = 1;$i < 7;$i++) {
-            echo "<p>F$i</p>";
+        $json = file_get_contents("test.txt");
+        $plan = json_decode($json, true);
+        $mo = $plan["frf"];
+        $mn =sizeof($mo);
+        for ($i = 0;$i < $mn;$i++) {
+            echo "<p>$mo[$i]</p>";
         }
         ?>
 
