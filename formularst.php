@@ -14,10 +14,15 @@
         <?php
 
         $zeile = file("test.txt", FILE_IGNORE_NEW_LINES);
+        $n = sizeof($zeile);
         for ($i = 0;$i < 6;$i++) {
-            echo "<p>
-             <input type='text' name='mof$i'value=$zeile[$i]>
-        </p>";}
+            if ($i   < $n ) {
+                echo "<p>
+                    <input type='text' name='mof$i'value=$zeile[$i]></p>";}
+            else{
+               echo "<p>
+                    <input type='text' name='mof$i'></p>";
+                    }}
         ?>
     </div>
   <div class="tag">
