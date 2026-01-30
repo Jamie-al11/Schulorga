@@ -32,13 +32,11 @@
       <h2>Di</h2>
       <hr>
       <?php
-      $x = 6; // Anzahl der Stunden die ein fach abfragen
       $json = file_get_contents("test.txt");
       $plan = json_decode($json, true);
       $di = $plan["dif"];
       $n = sizeof($di);
       for ($i = 0;$i < $x;$i++) {
-          echo "<input type='hidden' name='anzahl'  value = $x >";
           if ($i   < $n ) {
               echo "<p>
                     <input type='text' name='dif[]' value=$di[$i]></p>";}
@@ -52,13 +50,11 @@
       <h2>Mi</h2>
       <hr>
       <?php
-      $x = 6; // Anzahl der Stunden die ein fach abfragen
       $json = file_get_contents("test.txt");
       $plan = json_decode($json, true);
       $mi = $plan["mif"];
       $n = sizeof($mi);
       for ($i = 0;$i < $x;$i++) {
-          echo "<input type='hidden' name='anzahl'  value = $x >";
           if ($i   < $n ) {
               echo "<p>
                     <input type='text' name='mif[]' value=$mi[$i]></p>";}
@@ -72,13 +68,11 @@
       <h2>Do</h2>
       <hr>
       <?php
-      $x = 6; // Anzahl der Stunden die ein fach abfragen
       $json = file_get_contents("test.txt");
       $plan = json_decode($json, true);
       $do = $plan["dof"];
       $n = sizeof($do);
       for ($i = 0;$i < $x;$i++) {
-          echo "<input type='hidden' name='anzahl'  value = $x >";
           if ($i   < $n ) {
               echo "<p>
                     <input type='text' name='dof[]' value=$do[$i]></p>";}
@@ -92,13 +86,11 @@
       <h2>Fr</h2>
       <hr>
       <?php
-      $x = 6; // Anzahl der Stunden die ein fach abfragen
       $json = file_get_contents("test.txt");
       $plan = json_decode($json, true);
       $fr = $plan["frf"];
       $n = sizeof($fr);
       for ($i = 0;$i < $x;$i++) {
-          echo "<input type='hidden' name='anzahl'  value = $x >";
           if ($i   < $n ) {
               echo "<p>
                     <input type='text' name='frf[]' value=$fr[$i]></p>";}
