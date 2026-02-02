@@ -9,23 +9,22 @@
 
 <div class="stundenplan">
     <?php
-        foreach(['mo','di','mi','do','fr'] as $wochentag){
-            $ganzername = array("mo" =>"Monatg","di" =>"Diensttag","mi"=> "Mittwoch","do" => "Donnerstag","fr" =>"Freitag");
+        foreach(["mo" =>"Montag","di" =>"Diensttag","mi"=> "Mittwoch","do" => "Donnerstag","fr" =>"Freitag"] as $wochentagAbgekuerzt => $wochentagLang ){
             echo ('<div class="tag">');
-            echo ("<h2>$ganzername[$wochentag]</h2>");
+            echo ("<h2>$wochentagLang</h2>");
             echo ("<hr>");
         $x = 9; // Anzahl der Stunden die ein fach abfragen
         $json = file_get_contents("test.txt");
         $plan = json_decode($json, true);
-        $tag = $plan[$wochentag."f"];
+        $tag = $plan[$wochentagAbgekuerzt."f"];
         $n = sizeof($tag);
         for ($i = 0;$i < $x;$i++) {
             if ($i   < $n ) {
                 echo "<p>
-                    <input type='text' name='{$wochentag}f[]' value=$tag[$i]></p>";}
+                    <input type='text' name='{$wochentagAbgekuerzt}f[]' value=$tag[$i]></p>";}
             else{
                echo "<p>
-                    <input type='text' name='$wochentag.f[]'></p>";
+                    <input type='text' name='$wochentagAbgekuerzt.f[]'></p>";
                     }}
         echo "</div>";}
         ?>
