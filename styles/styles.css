@@ -35,4 +35,5 @@ body {
     padding: 23px;
     background:green;
     text-align: center;
+    flex: auto;
 }

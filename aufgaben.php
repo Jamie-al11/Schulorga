@@ -16,18 +16,20 @@
         ?>
     </h2>
     <?php
-    $test =file_get_contents('test1.txt');
+    $test =file_get_contents('Aufgaben.txt');
     echo "<p class='aufgaben'>$test</p>";
     ?>
 </div>
 <div class="tag">
-    <h2>28.9.26</h2>
+    <h2> <?php
+        echo date("d.m.Y",strtotime("+1 day"));
+        ?></h2>
     <p class="aufgaben">Andere Aufgabe</p>
 </div>
 
 <a href="index.php">Hauptseite</a>
 <p></p>
-<a href="formularst.php">Formular</a>
+<a href="formularaf.php">Formular</a>
 
 </body>
 </html>
