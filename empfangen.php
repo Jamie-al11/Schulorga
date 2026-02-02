@@ -1,7 +1,9 @@
 <?php
-$x = $_POST['anzahl'];
 
 foreach (['mo','di','mi','do','fr'] as $tag) {
+    if (empty($_POST[$tag.'f'])) {
+        $_POST[$tag.'f'] = array("kein fach",);
+    }
     ${$tag.'f'} = $_POST[$tag.'f'];
 }
 

@@ -15,6 +15,10 @@
             echo "<h2>$ganzername[$wochentag]</h2>";
             echo "<hr>";
         $json = file_get_contents("test.txt");
+        if (empty($json)){
+            echo ("ist leer");
+            header("Location: http://localhost/Schulorga/empfangen.php");
+        }
         $plan = json_decode($json, true);
         $wochentag = $plan[$wochentag."f"];
         $n =sizeof($wochentag);

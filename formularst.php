@@ -14,13 +14,12 @@
             echo ('<div class="tag">');
             echo ("<h2>$ganzername[$wochentag]</h2>");
             echo ("<hr>");
-        $x = 6; // Anzahl der Stunden die ein fach abfragen
+        $x = 9; // Anzahl der Stunden die ein fach abfragen
         $json = file_get_contents("test.txt");
         $plan = json_decode($json, true);
         $tag = $plan[$wochentag."f"];
         $n = sizeof($tag);
         for ($i = 0;$i < $x;$i++) {
-            echo "<input type='hidden' name='anzahl'  value = $x >";
             if ($i   < $n ) {
                 echo "<p>
                     <input type='text' name='{$wochentag}f[]' value=$tag[$i]></p>";}
