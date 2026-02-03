@@ -4,8 +4,8 @@ foreach (['mo','di','mi','do','fr'] as $tag) {
     if (empty($_POST[$tag.'f'])) {
         $_POST[$tag.'f'] = array("kein fach",);
     }
+    $_POST[$tag.'f'] = array_filter($_POST[$tag.'f'],fn($x) => $x !==""and $x !== " ");
     ${$tag.'f'} = $_POST[$tag.'f'];
-    ${$tag.'f'} = array_filter(${$tag.'f'},fn($x) => $x !==""and $x !== " ");
 }
 $stundenplan = array( "mof" => $mof,
                       "dif" => $dif,
