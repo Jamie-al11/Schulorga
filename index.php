@@ -14,12 +14,10 @@
             echo "<h2>$ganzername</h2>";
             echo "<hr>";
         $json = file_get_contents("test.txt");
-
         $plan = json_decode($json, true);
         $wochentag = $plan[$wochentag."f"];
-        $n =sizeof($wochentag);
-        for ($i = 0;$i < $n;$i++) {
-            echo "<p>$wochentag[$i]</p>";
+        foreach ($wochentag as $fach)
+            { echo "<p>$fach</p>";
         }
     echo ("</div>");
         }
