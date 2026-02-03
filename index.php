@@ -9,18 +9,19 @@
 <h1>Schulorga</h1>
 <div class="stundenplan">
     <?php
-        foreach(['mo'=> 'Monatg','di' => 'Diensttag','mi' => 'Mitwoch','do' => 'Donnerstag','fr' => 'Freitag'] as $wochentag => $ganzername){
-            echo '<div class="tag">';
-            echo "<h2>$ganzername</h2>";
-            echo "<hr>";
+    foreach(['mo'=> 'Monatg','di' => 'Diensttag','mi' => 'Mitwoch','do' => 'Donnerstag','fr' => 'Freitag'] as $wochentag => $ganzername){
+        echo '<div class="tag">';
+        echo "<h2>$ganzername</h2>";
+        echo "<hr>";
         $json = file_get_contents("test.txt");
         $plan = json_decode($json, true);
         $wochentag = $plan[$wochentag."f"];
-        foreach ($wochentag as $fach)
-            { echo "<p>$fach</p>";
+        $x = max(array_keys($wochentag));
+         for ($i = 0; $i <= $x; $i++){
+             echo "<P>".(isset($wochentag[$i]) ? $wochentag[$i] : " ")."</P>";
         }
-    echo ("</div>");
-        }
+        echo ("</div>");
+    }
     ?>
 
 </div>

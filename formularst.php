@@ -19,8 +19,8 @@
             $tag = $plan[$wochentagAbgekuerzt . "f"];
             $n = sizeof($tag);
             for ($i = 0; $i < $x; $i++) {
-                $value = ($i < $n) ? $tag[$i] : "";
-                echo "<p><input type='text' name='{$wochentagAbgekuerzt}f[]' value='$value'></p>";
+                $value = array_key_exists($i,$tag) ? $tag[$i] : "";
+                echo "<p><input type='text' name='stundenplan[{$wochentagAbgekuerzt}f][]' value='$value'></p>";
             }
             echo "</div>";
         }
