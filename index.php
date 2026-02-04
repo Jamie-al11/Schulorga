@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Schulorga</title>
-    <link href="styles/styles.css?v=<?php echo time() ?>" rel="stylesheet"/>
+    <link href="styles/styles.css" rel="stylesheet"/>
 </head>
 <body>
 <h1>Schulorga</h1>
