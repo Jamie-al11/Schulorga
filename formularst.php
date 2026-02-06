@@ -4,23 +4,18 @@
     <link href="styles/styles.css" rel="stylesheet"/>
 </head>
 
-<form>
+<form method="post" action="empfangen%20datenbank.php">
     <?php
 $pdo = new PDO('mysql:host=localhost;dbname=mein test', 'root', '');
-$statement = $pdo->query("SELECT * FROM `krasse tabelle`");
+$statement = $pdo->query("SELECT * FROM `tag`");
 while ($row = $statement->fetch()) {
-    echo $row['Jonas'];
+    echo $row['name'];
+    echo "<p>";
 }
-$wert = "wert";
-$statement = $pdo->prepare("INSERT INTO `krasse tabelle` (`Jonas`) VALUES (:jonas)");
-$statement->execute([
-    ':jonas' => $wert
-]);
-
-echo "Eintrag gespeichert!";
+echo "<input type=text name='row'>";
 ?>
 
 
-    ?>
+    <button type="submit" >Fertig</button>
 </form>
 <a href="index.php">Startseite</a>
