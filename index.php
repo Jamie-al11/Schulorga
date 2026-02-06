@@ -9,16 +9,18 @@
 <h1>Schulorga</h1>
 <div class="stundenplan">
     <?php
-    foreach(['mo'=> 'Monatg','di' => 'Diensttag','mi' => 'Mitwoch','do' => 'Donnerstag','fr' => 'Freitag'] as $wochentag => $ganzername){
+    foreach(['mo'=> 'Montag','di' => 'Dienstag','mi' => 'Mitwoch','do' => 'Donnerstag','fr' => 'Freitag'] as $wochentag => $ganzername) {
         echo '<div class="tag">';
-            echo "<h2>$ganzername</h2>";
-            echo "<hr>";
-            $pdo = new PDO('mysql:host=localhost;dbname=mein test', 'root', '');
-            $statement = $pdo->query("SELECT stunde.Stunde,fach.name FROM `stunde` JOIN `fach` ON fach.id = stunde.Fach_id; ");
-            while ($row = $statement->fetch()) {
-                echo $row['name'];
-                echo "<p>";
-                }}
+        echo "<h2>$ganzername</h2>";
+        echo "<hr>";
+        $pdo = new PDO('mysql:host=localhost;dbname=mein test', 'root', '');
+        $statement = $pdo->query(" SELECT fach.name AS fachname FROM stunde JOIN fach ON fach.id = stunde.Fach_id JOIN tag ON tag.id = stunde.Tag_id WHERE tag.name = '$ganzername' ORDER BY stunde.Stunde;  ");
+        $statement->execute();
+         while ($row = $statement->fetch()) {
+             echo "<p> {$row['fachname']}</p>";
+         }
+    echo "</div>";
+    }
     ?>
 
 </div>
