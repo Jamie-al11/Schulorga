@@ -11,17 +11,14 @@
     <?php
     foreach(['mo'=> 'Monatg','di' => 'Diensttag','mi' => 'Mitwoch','do' => 'Donnerstag','fr' => 'Freitag'] as $wochentag => $ganzername){
         echo '<div class="tag">';
-        echo "<h2>$ganzername</h2>";
-        echo "<hr>";
-        $json = file_get_contents("test.txt");
-        $plan = json_decode($json, true);
-        $wochentag = $plan[$wochentag."f"];
-        $x = max(array_keys($wochentag));
-         for ($i = 0; $i <= $x; $i++){
-             echo "<P>".(isset($wochentag[$i]) ? $wochentag[$i] : " ")."</P>";
-        }
-        echo ("</div>");
-    }
+            echo "<h2>$ganzername</h2>";
+            echo "<hr>";
+            $pdo = new PDO('mysql:host=localhost;dbname=mein test', 'root', '');
+            $statement = $pdo->query("SELECT stunde.Stunde,fach.name FROM `stunde` JOIN `fach` ON fach.id = stunde.Fach_id; ");
+            while ($row = $statement->fetch()) {
+                echo $row['name'];
+                echo "<p>";
+                }}
     ?>
 
 </div>

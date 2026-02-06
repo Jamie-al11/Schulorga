@@ -7,7 +7,7 @@
 <form method="post" action="empfangen%20datenbank.php">
     <?php
 $pdo = new PDO('mysql:host=localhost;dbname=mein test', 'root', '');
-$statement = $pdo->query("SELECT * FROM `tag`");
+$statement = $pdo->query("SELECT stunde.Stunde,fach.name FROM `stunde` JOIN `fach` ON fach.id = stunde.Fach_id; ");
 while ($row = $statement->fetch()) {
     echo $row['name'];
     echo "<p>";
