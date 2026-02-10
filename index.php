@@ -9,7 +9,7 @@
 <h1>Schulorga</h1>
 <div class="stundenplan">
     <?php
-    foreach(['mo'=> 'Montag','di' => 'Dienstag','mi' => 'Mitwoch','do' => 'Donnerstag','fr' => 'Freitag'] as $wochentag => $ganzername) {
+    foreach(['mo'=> 'Montag','di' => 'Dienstag','mi' => 'Mittwoch','do' => 'Donnerstag','fr' => 'Freitag'] as $wochentag => $ganzername) {
         echo '<div class="tag">';
         echo "<h2>$ganzername</h2>";
         echo "<hr>";
