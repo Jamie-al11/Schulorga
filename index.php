@@ -14,7 +14,7 @@
         echo "<h2>$ganzername</h2>";
         echo "<hr>";
         $pdo = new PDO('mysql:host=localhost;dbname=mein test', 'root', '');
-        $statement = $pdo->query(" SELECT fach.name AS fachname FROM stunde JOIN fach ON fach.id = stunde.Fach_id JOIN tag ON tag.id = stunde.Tag_id WHERE tag.name = '$ganzername' ORDER BY stunde.Stunde;  ");
+        $statement = $pdo->query(" SELECT fach.name AS fachname FROM stundenplan JOIN fach ON fach.id = stundenplan.Fach_id JOIN tag ON tag.id = stundenplan.Tag_id WHERE tag.name = '$ganzername' ORDER BY stundenplan.Stunde;  ");
         $statement->execute();
          while ($row = $statement->fetch()) {
              echo "<p> {$row['fachname']}</p>";
