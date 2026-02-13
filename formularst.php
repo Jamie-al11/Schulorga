@@ -20,7 +20,6 @@ function Select_fuer_die_Faecher($tagid,$stundenid,$faecher,$pdo)
     $aktuellesFach = $statement->fetch(PDO::FETCH_ASSOC)['fach_id'] ?? null;
 // Select ausgeben
     echo "<select name='stundenplan[$tagid][$stundenid]'>";
-
     foreach ($faecher as $fach) {
         $selected = ($fach['id'] == $aktuellesFach) ? "selected" : "";
         echo "<option value=" .$fach['id']." $selected>" . $fach['name']."</option>";
@@ -42,7 +41,7 @@ function Select_fuer_die_Faecher($tagid,$stundenid,$faecher,$pdo)
         echo "<h2>$ganzername</h2>";
         echo "<hr>";
         for ($i = 1; $i <= 9; $i++){
-            echo "<p> $i";
+            echo "<p> ";
             Select_fuer_die_Faecher($ganzername,$i,$faecher,$pdo);
             echo "</p>";
         }
